@@ -60,7 +60,7 @@ header {
 .card-columns {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .card-columns .cardcontainer {
