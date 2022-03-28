@@ -14,12 +14,12 @@ express-handlebars: ^6.0.3
 ## Installing and Execution
 1. Clone projet to your localhost
 ```
-git clone https://github.com/yc62897441/AC-Exercise-S2-3-A3-Build-RestaurentList.git
+git clone https://github.com/yc62897441/AC-Exercise-S2-3-A3-Build-RestaurantList.git
 ```
 
 2. change directory to project file "AC-Exercise-S2-3-U55-movie-list"
 ```
-cd "AC-Exercise-S2-3-A3-Build-RestaurentList"
+cd "AC-Exercise-S2-3-A3-Build-RestaurantList"
 ```
 
 3. install npm module
@@ -33,8 +33,8 @@ npm run dev
 ```
 
 ## Features
-1. List a restaurents list
+1. List a restaurants list
 
-2. Click single restaurent for detailed introduction
+2. Click single restaurant for detailed introduction
 
-3. Use "Search bar" to search restaurents
+3. Use "Search bar" to search restaurants

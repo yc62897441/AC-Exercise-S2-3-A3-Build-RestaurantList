@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 
 // load data(餐廳資料)
-const restaurentList = require("./restaurant.json")
+const restaurantList = require("./restaurant.json")
 
 // require express-handlebars here
 const exphbs = require("express-handlebars")
@@ -18,25 +18,25 @@ app.use(express.static("public"))
 
 // routes setting index page (main page)
 app.get("/", (req, res) => {
-  res.render("index", { restaurents: restaurentList.results })
+  res.render("index", { restaurants: restaurantList.results })
 })
 
 // route setting search bar output
 app.get("/search", (req, res) => {
   keyword = req.query.keyword
-  const restaurents = restaurentList.results.filter(item => item.name.toLowerCase().includes(keyword.toLowerCase()))
+  const restaurants = restaurantList.results.filter(item => item.name.toLowerCase().includes(keyword.toLowerCase()))
   // 如果有成功搜尋到結果，則清空回傳到search bar的字串
-  if (restaurents.length > 0) {
+  if (restaurants.length > 0) {
     keyword = ""
   }
-  res.render("index", { restaurents: restaurents, keyword: keyword })
+  res.render("index", { restaurants: restaurants, keyword: keyword })
 })
 
-// routes setting single restaurent page
+// routes setting single restaurant page
 app.get("/restaurants/:id", (req, res) => {
   const id = req.params.id.toString().toLowerCase()
-  const restaurent = restaurentList.results.find(item => item.id.toString().toLowerCase() === id)
-  res.render("show", { restaurent: restaurent })
+  const restaurant = restaurantList.results.find(item => item.id.toString().toLowerCase() === id)
+  res.render("show", { restaurant: restaurant })
 })
 
 // 啟動監聽server
